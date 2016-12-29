@@ -6,6 +6,6 @@ package com.gojek.problem.service.jdbi;
 public class DBIFactory {
 
     public DBI build() {
-        return new InMemoryDBI();
+        return new InMemoryDBIImpl();
     }
 }

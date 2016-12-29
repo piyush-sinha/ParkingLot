@@ -15,18 +15,18 @@ import java.util.stream.Collectors;
 /**
  * Created by piyushsinha.c on 28/12/16.
  */
-public class InMemoryDBI implements DBI {
+public class InMemoryDBIImpl implements DBI {
     private Map<Integer, Car> slotToCarMapping;
     private Map<String, Car> registrationToCarMapping;
     private Multimap<String,Car> colorToCarMapping;
     private PriorityQueue<Integer> vacantSlots;
     private int maxNoOfVehicles;
 
-    public InMemoryDBI() {
+    public InMemoryDBIImpl() {
         this(-1);
     }
 
-    public InMemoryDBI(int maxNoOfVehicles) {
+    public InMemoryDBIImpl(int maxNoOfVehicles) {
         this.slotToCarMapping = Maps.newTreeMap();
         this.registrationToCarMapping = Maps.newTreeMap();
         this.colorToCarMapping = ArrayListMultimap.create();
